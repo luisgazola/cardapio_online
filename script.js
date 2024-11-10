@@ -22,7 +22,9 @@ function showToast(message, backgroundColor) {
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
             background: backgroundColor,
+            transition: "all 0.5s ease",
         },
+        className: "toastify",  // Aplicando a classe que contém as animações CSS
     }).showToast();
 }
 
@@ -125,7 +127,6 @@ function removeItemCart(name) {
         cart.splice(index, 1);
         updateCartModal();
         showToast(`${item.name} foi retirado do seu carrinho. Mas não se preocupe, você sempre pode adicionar de novo! 😉`, "#F97316");
-
     }
 }
 
